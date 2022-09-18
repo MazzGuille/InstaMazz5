@@ -9,30 +9,54 @@
         />
       </div>
       <div class="col-12 col-md-6 q-px-md q-my-auto">
-        <q-form>
-          <q-input type="email" name="Email" label="E-Mail">
+        <q-form autocomplete="off">
+          <q-input
+            v-model="storeLogreg.Email"
+            type="email"
+            name="Email"
+            label="E-Mail"            
+          >
             <template v-slot:prepend>
               <q-icon class="text-primary" name="email" />
             </template>
           </q-input>
-          <q-input type="password" name="Password" label="Contraseña">
+          <q-input
+            v-model="storeLogreg.Contraseña"
+            type="password"
+            name="Password"
+            label="Contraseña"
+          >
             <template v-slot:prepend>
               <q-icon class="text-primary" name="key" />
             </template>
           </q-input>
-          <div class=" column justify-around items-center">
-             <q-btn
-               outline
-               rounded
-               color="primary"
-               label="Iniciar Sesion"
-               to="/feed"
-               class="q-mt-sm"
-             />
-             <p class=" q-ma-none q-mt-sm text-primary">¿Aun no tinees una cuenta? <router-link class=" decoration-none text-bold text-primary" to="/register">¡CREA UNA AQUI!</router-link></p>
+          <div class="column justify-around items-center">
+            <q-btn
+              @click.prevent="storeLogreg.iniciarSesion"
+              type="submit"
+              outline
+              rounded
+              color="primary"
+              label="Iniciar Sesion"              
+              class="q-mt-sm"
+            />
+            <p class="q-ma-none q-mt-sm text-primary">
+              ¿Aun no tinees una cuenta?
+              <router-link
+                class="decoration-none text-bold text-primary"
+                to="/register"
+                >¡CREA UNA AQUI!</router-link
+              >
+            </p>
           </div>
         </q-form>
       </div>
     </div>
   </q-page>
 </template>
+
+<script setup>
+import { ref } from "vue";
+import { LogReg } from "src/stores/LogReg";
+const storeLogreg = LogReg();
+</script>

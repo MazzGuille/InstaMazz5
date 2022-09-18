@@ -10,7 +10,9 @@
           InstaMazz
         </q-toolbar-title>
         <q-space />
-        <p>v5.0</p>
+        <div class="flex justify-center items-center" style="height: 32px">
+          <p class=" q-ma-none">v5.0</p>
+        </div>
       </q-toolbar>
     </q-header> 
 

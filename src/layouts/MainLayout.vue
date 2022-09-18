@@ -16,8 +16,11 @@
             </q-toolbar-title>
           </q-item-section>
         </q-item>
-        <q-space />
-        <p>v5.0</p>
+        <q-space />        
+        <router-link class=" decoration-none text-bold text-negative flex justify-center items-center" to="/">
+        <q-icon size="20px" color="negative" name="meeting_room"/>
+        Salir
+        </router-link>
       </q-toolbar>
     </q-header>
 
@@ -65,7 +68,6 @@ import { ref } from "vue";
 //import Drawer from 'components/Drawer.vue'
 
 const leftDrawerOpen = ref(false);
-
 const toggleLeftDrawer = () => {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 };
