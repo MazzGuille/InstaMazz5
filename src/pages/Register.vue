@@ -46,7 +46,7 @@
                rounded
                color="primary"
                label="Crear usuario"
-               to="/feed"
+               to="/login"
                class="q-mt-sm"
              />
              <p class=" q-ma-none q-mt-sm text-primary">¿Ya tines una cuenta? <router-link class=" decoration-none text-bold text-primary" to="/">¡INICIA SESION AQUI!</router-link></p>
