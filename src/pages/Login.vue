@@ -32,14 +32,16 @@
           </q-input>
           <div class="column justify-around items-center">
             <q-btn
-              @click.prevent="storeLogreg.iniciarSesion"
-              type="submit"
+              @click.prevent="storeLogreg.iniciarSesion"    
+              type="submit"   
+              to="'/feed'"       
               outline
               rounded
               color="primary"
               label="Iniciar Sesion"              
-              class="q-mt-sm"
+              class="q-mt-sm"              
             />
+         
             <p class="q-ma-none q-mt-sm text-primary">
               ¿Aun no tinees una cuenta?
               <router-link
@@ -58,5 +60,12 @@
 <script setup>
 import { ref } from "vue";
 import { LogReg } from "src/stores/LogReg";
+import router from "src/router";
+
 const storeLogreg = LogReg();
+
+const FeedMove = () => {
+  router.push('/feed')
+}
+
 </script>

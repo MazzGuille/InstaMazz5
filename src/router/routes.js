@@ -12,7 +12,7 @@ const routes = [
     path: '/feed',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/feed', name: 'feed', component: () => import('src/pages/Feed.vue') },
+      { path: '/feed', component: () => import('src/pages/Feed.vue') },
       { path: '/profile', component: () => import('src/pages/Profile.vue') }
     ]
   },

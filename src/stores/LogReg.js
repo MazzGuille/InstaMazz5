@@ -43,8 +43,7 @@ export const LogReg = defineStore('LogReg', () => {
       if (res.status === 200) {
         credentials.value = false
         Email.value = ''
-        Contraseña.value = ''
-        router.push("/feed")
+        Contraseña.value = ''        
       } else {
         valCredentials()
       }
