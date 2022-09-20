@@ -32,9 +32,8 @@
           </q-input>
           <div class="column justify-around items-center">
             <q-btn
-              @click.prevent="storeLogreg.iniciarSesion"    
-              type="submit"   
-              to="'/feed'"       
+              @click.prevent="storeLogreg.iniciarSesion"                
+              type="submit"                     
               outline
               rounded
               color="primary"
@@ -60,12 +59,6 @@
 <script setup>
 import { ref } from "vue";
 import { LogReg } from "src/stores/LogReg";
-import router from "src/router";
-
 const storeLogreg = LogReg();
-
-const FeedMove = () => {
-  router.push('/feed')
-}
 
 </script>

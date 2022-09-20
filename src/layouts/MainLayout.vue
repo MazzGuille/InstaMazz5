@@ -4,7 +4,7 @@
       <q-toolbar>
         <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
 
-        <q-item clickable v-ripple to="/feed">
+        <q-item clickable v-ripple to="/inner/feed">
           <q-item-section>
             <q-toolbar-title class="text-grey-1">
               <q-avatar>
@@ -16,15 +16,27 @@
             </q-toolbar-title>
           </q-item-section>
         </q-item>
-        <q-space />        
-        <router-link class=" decoration-none text-bold text-negative flex justify-center items-center" to="/">
-        <q-icon size="20px" color="negative" name="meeting_room"/>
-        Salir
+        <q-space />
+        <router-link
+          class="
+            decoration-none
+            text-bold text-negative
+            flex
+            justify-center
+            items-center
+            text-weight-bold
+            text-body1
+            text-white
+          "
+          to="/"
+        >
+          <q-icon size="md" color="negative" name="meeting_room" />
+          Salir
         </router-link>
       </q-toolbar>
     </q-header>
 
-   <q-drawer
+    <q-drawer
       :width="125"
       v-model="leftDrawerOpen"
       side="left"
@@ -35,10 +47,10 @@
         <q-item
           clickable
           v-ripple
-          to="/feed"
+          to="/inner/feed"
           class="row justify-center items-center"
         >
-          <q-icon name="home" />
+          <q-icon size="sm" left name="home" />
           <q-item-section @click="leftDrawerOpen = false" class="q-ml-xs">
             Inicio
           </q-item-section>
@@ -46,12 +58,34 @@
         <q-item
           clickable
           v-ripple
-          to="/profile"
+          to="/inner/profile"
           class="row justify-center items-center"
         >
-          <q-icon name="person" />
+          <q-icon size="sm" left name="person" />
           <q-item-section @click="leftDrawerOpen = false" class="q-ml-xs">
             Perfil
+          </q-item-section>
+        </q-item>
+        <q-item
+          clickable
+          v-ripple
+          to="/inner/chat"
+          class="row justify-center items-center"
+        >
+          <q-icon size="sm" left name="question_answer" />
+          <q-item-section @click="leftDrawerOpen = false" class="q-ml-xs">
+            Chat
+          </q-item-section>
+        </q-item>
+        <q-item
+          clickable
+          v-ripple
+          to="/inner/search"
+          class="row justify-center items-center"
+        >
+          <q-icon size="sm" left name="search" />
+          <q-item-section @click="leftDrawerOpen = false" class="q-ml-xs">
+            Buscar
           </q-item-section>
         </q-item>
       </q-list>

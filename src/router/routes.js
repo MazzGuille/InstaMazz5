@@ -9,11 +9,13 @@ const routes = [
     ]
   },
   {
-    path: '/feed',
+    path: '/inner',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '/feed', component: () => import('src/pages/Feed.vue') },
-      { path: '/profile', component: () => import('src/pages/Profile.vue') }
+      { path: '/inner/feed', component: () => import('src/pages/Feed.vue') },
+      { path: '/inner/profile', component: () => import('src/pages/Profile.vue') },
+      { path: '/inner/chat', component: () => import('src/pages/Chat.vue') },
+      { path: '/inner/search', component: () => import('src/pages/Search.vue') }
     ]
   },
 

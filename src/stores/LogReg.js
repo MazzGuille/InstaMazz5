@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import router from "src/router";
 import { ref } from 'vue'
 import axios from "axios";
+import { route } from 'quasar/wrappers';
 
 
 export const LogReg = defineStore('LogReg', () => {
@@ -43,7 +44,8 @@ export const LogReg = defineStore('LogReg', () => {
       if (res.status === 200) {
         credentials.value = false
         Email.value = ''
-        Contraseña.value = ''        
+        Contraseña.value = ''  
+        location.replace('/inner/feed')       
       } else {
         valCredentials()
       }
