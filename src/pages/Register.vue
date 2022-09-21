@@ -78,7 +78,7 @@
             v-model="storeLogreg.BioUsuario"
             type="textarea"
             name="Bio"
-            label="Biografia"
+            label="Biografia (Opcional)"
           >
             <template v-slot:prepend>
               <q-icon class="text-primary" name="feed" />
@@ -141,3 +141,4 @@ const moveToLogin = () => {
   storeLogreg.BioUsuario = "";
 };
 </script>
+

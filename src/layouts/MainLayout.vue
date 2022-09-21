@@ -18,7 +18,7 @@
         </q-item>
         <q-space />
         <router-link
-          class="
+          class=" 
             decoration-none
             text-bold text-negative
             flex

@@ -3,4 +3,27 @@
     text-decoration: none;
 }
 
+.hover-pointer{
+    cursor: pointer;
+}
+
+.colum-flex{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: 
+    space-around; 
+    align-items: center; 
+    gap:10px; 
+}
+
+.img-style{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 6px 6px 19px 1px rgba(0, 0, 0, 0.59);
+    -webkit-box-shadow: 6px 6px 19px 1px rgba(0, 0, 0, 0.59);
+    -moz-box-shadow: 6px 6px 19px 1px rgba(0, 0, 0, 0.59);
+}
+
 

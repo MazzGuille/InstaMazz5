@@ -6,7 +6,7 @@ import axios from "axios";
 import { route } from 'quasar/wrappers';
 
 
-export const LogReg = defineStore('LogReg', () => {
+export const LogReg = defineStore('LogReg', () => {1
   //const storeValidaciones = Validaciones
 
   const Email = ref('')
