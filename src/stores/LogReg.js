@@ -1,13 +1,14 @@
 import { defineStore } from 'pinia'
 //import { Validaciones } from "./Validaciones"
-import router from "src/router";
 import { ref } from 'vue'
 import axios from "axios";
 import { route } from 'quasar/wrappers';
+import { useRouter } from 'vue-router';
 
 
-export const LogReg = defineStore('LogReg', () => {1
+export const LogReg = defineStore('LogReg', () => {
   //const storeValidaciones = Validaciones
+  const router = useRouter()
 
   const Email = ref('')
   const Nombre = ref('')
@@ -45,7 +46,7 @@ export const LogReg = defineStore('LogReg', () => {1
         credentials.value = false
         Email.value = ''
         Contraseña.value = ''  
-        location.replace('/inner/feed')       
+        router.push('/inner/feed')       
       } else {
         valCredentials()
       }
